@@ -13,6 +13,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 apk add elogind polkit-elogind dbus wpa_supplicant networkmanager pulseaudio \
     pulseaudio-alsa bluez networkmanager-wifi networkmanager-tui
 echo -e "live\nlive\n" | passwd root
+echo -e "live\nlive\n" | adduser user
 rc-update add dbus
 rc-update add bluetooth
 rc-update add networkmanager
