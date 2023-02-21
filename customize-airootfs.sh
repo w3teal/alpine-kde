@@ -23,3 +23,6 @@ rc-update add wpa_supplicant
 rc-update add sddm
 rc-update add udev
 rc-update add elogind
+# laptop stuff
+apk add acpi cpufreqd pm-utils
+rc-update add cpufreqd
