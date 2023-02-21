@@ -4,3 +4,4 @@ grub
 grub-efi
 efibootmgr
 grub-bios
+e2fsprogs
