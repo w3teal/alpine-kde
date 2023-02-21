@@ -1,2 +1,6 @@
 bash
 linux-edge
+grub
+grub-efi
+efibootmgr
+grub-bios
