@@ -11,7 +11,9 @@ apk add nano chromium ca-certificates flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # logind and other stuff
 apk add elogind polkit-elogind dbus wpa_supplicant networkmanager pulseaudio \
-    pulseaudio-alsa bluez networkmanager-wifi networkmanager-tui
+    pulseaudio-alsa bluez networkmanager-wifi networkmanager-tui librsvg
+# remove baloo_file at startup
+rm -f /etc/xdg/autostart/baloo_file.desktop
 echo -e "live\nlive\n" | passwd root
 echo -e "live\nlive\n" | adduser user
 rc-update add dbus
