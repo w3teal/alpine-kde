@@ -3,7 +3,7 @@ apk update
 apk upgrade
 setup-xorg-base || true
 # kde
-apk add plasma-desktop systemsettings sddm breeze plasma
+apk add plasma-desktop systemsettings sddm breeze plasma okular
 apk add ark dolphin konsole kate gwenview okular spectacle
 # apps
 apk add nano chromium ca-certificates flatpak 
