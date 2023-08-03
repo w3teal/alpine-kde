@@ -28,5 +28,4 @@ rc-update add fuse
 apk add acpi cpufreqd pm-utils
 rc-update add cpufreqd
 cd /
-apk info -L baloo | xargs rm -rvf
 apk info -L discover | xargs rm -rvf
