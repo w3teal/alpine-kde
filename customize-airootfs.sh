@@ -27,5 +27,12 @@ rc-update add fuse
 # laptop stuff
 apk add acpi cpufreqd pm-utils
 rc-update add cpufreqd
+# i915 stuff
+cat > /etc/modprobe.d/i915.conf <<EOF
+options i915 enable_rc6=1
+options i915 enable_psr=1
+options i915 enable_guc=2
+options i915 enable_fbc=1
+EOF
 cd /
 apk info -L discover | xargs rm -rvf
