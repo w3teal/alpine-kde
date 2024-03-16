@@ -15,7 +15,6 @@ apk add elogind polkit-elogind dbus wpa_supplicant networkmanager pulseaudio \
 # remove baloo_file at startup
 rm -f /etc/xdg/autostart/baloo_file.desktop
 echo -e "live\nlive\n" | passwd root
-echo -e "live\nlive\n" | adduser user
 rc-update add dbus
 rc-update add bluetooth
 rc-update add networkmanager
@@ -34,5 +33,3 @@ options i915 enable_psr=1
 options i915 enable_guc=2
 options i915 enable_fbc=1
 EOF
-cd /
-apk info -L discover | xargs rm -rvf
