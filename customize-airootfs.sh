@@ -1,14 +1,13 @@
 #!/usr/bin/env bash
 apk update
 apk upgrade
-setup-xorg-base || true
+# x11
+apk add xorg-server xf86-input-libinput eudev mesa-dri-gallium
 # kde
-apk add plasma-desktop systemsettings sddm breeze plasma okular
-apk add ark dolphin konsole kate gwenview okular spectacle
+apk add plasma-desktop systemsettings sddm breeze okular
+apk add ark dolphin konsole spectacle
 # apps
-apk add nano chromium ca-certificates flatpak 
-# flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+apk add nano konqueror ca-certificates 
 # logind and other stuff
 apk add elogind polkit-elogind dbus wpa_supplicant networkmanager pulseaudio \
     pulseaudio-alsa bluez networkmanager-wifi networkmanager-tui librsvg fuse
