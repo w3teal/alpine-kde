@@ -9,8 +9,11 @@ apk add ark dolphin konsole spectacle
 # apps
 apk add nano konqueror ca-certificates 
 # logind and other stuff
-apk add elogind polkit-elogind dbus wpa_supplicant networkmanager pulseaudio \
-    pulseaudio-alsa bluez networkmanager-wifi networkmanager-tui librsvg fuse
+apk add elogind polkit-elogind dbus wpa_supplicant networkmanager \
+    bluez networkmanager-wifi networkmanager-tui librsvg fuse
+# pipewire
+apk add wireplumber pipewire pipewire-pulse pipewire-alsa pipewire-spa-bluez \
+    pipewire-jack pipewire-spa-tools
 # remove baloo_file at startup
 rm -f /etc/xdg/autostart/baloo_file.desktop
 echo -e "live\nlive\n" | passwd root
